@@ -1,3 +1,4 @@
+//@ts-ignore
 import { searchUniversities } from "../actions";
 import ResultsTable from "./results-table";
 
@@ -9,7 +10,6 @@ export default async function SearchResults({
   const query = searchParams?.query;
 
   if (!query) {
-    console.log(searchParams);
     return null;
   }
 
