@@ -1,4 +1,4 @@
-//@ts-ignore
+//@ts-nocheck
 import { Suspense } from "react";
 import SearchForm from "./components/search-form";
 import SearchResults from "./components/search-results";

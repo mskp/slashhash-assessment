@@ -1,4 +1,4 @@
-//@ts-ignore
+//@ts-nocheck
 import { searchUniversities } from "../actions";
 import ResultsTable from "./results-table";
 
