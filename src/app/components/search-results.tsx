@@ -1,4 +1,3 @@
-import { ReadonlyURLSearchParams } from "next/navigation";
 import { searchUniversities } from "../actions";
 import ResultsTable from "./results-table";
 
