@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# University Search - India
 
-## Getting Started
+A Next.js application that allows users to search for universities in India, view details, and save favorites.
 
-First, run the development server:
+## GitHub Repository
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+[https://github.com/mskp/slashhash-assessment](https://github.com/mskp/slashhash-assessment)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [Next.js](https://nextjs.org/) - React framework for building server-side rendered and static web applications
+- [React](https://reactjs.org/) - JavaScript library for building user interfaces
+- [TypeScript](https://www.typescriptlang.org/) - Typed superset of JavaScript
+- [PostgreSQL](https://www.postgresql.org/) - Open-source relational database
+- [Prisma](https://www.prisma.io/) - Next-generation ORM for Node.js and TypeScript
+- [Bootstrap 5](https://getbootstrap.com/) - CSS framework for responsive, mobile-first front-end web development
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Features
 
-## Learn More
+- Search for universities in India
+- View university details including name, state/province, and web pages
+- Add universities to favorites
+- View and manage favorite universities
+- Responsive design using Bootstrap 5
 
-To learn more about Next.js, take a look at the following resources:
+## Setup
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone the repository:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```
+   git clone https://github.com/mskp/slashhash-assessment.git
+   cd slashhash-assessment
+   ```
 
-## Deploy on Vercel
+2. Install dependencies:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```
+   npm install
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. Set up your PostgreSQL database and add the DATABASE_URL to your .env file:
+
+   ```
+   DATABASE_URL="postgresql://username:password@localhost:5432/your_database_name"
+   ```
+
+4. Run Prisma migrations:
+
+   ```
+   npx prisma generate
+   npx prisma db push
+   ```
+
+5. Start the development server:
+   ```
+   npm run dev
+   ```
+
+## Usage
+
+1. Open your browser and navigate to `http://localhost:3000`
+2. Use the search form to find universities in India
+3. Click the "Favorite" button to save a university to your favorites
+4. Navigate to the "Favorites" page to view and manage your saved universities
+
+## Additional Information
+
+- This project uses Bootstrap 5 for styling and responsive design. The Bootstrap CSS is imported in the `app/layout.tsx` file.
+- Server Actions are used for data fetching and mutations, leveraging Next.js 13+ features.
+- The application uses the [university domains list API](https://github.com/Hipo/university-domains-list-api) to fetch university data.
+- Prisma is used as the ORM for database operations, providing type-safe database access.
